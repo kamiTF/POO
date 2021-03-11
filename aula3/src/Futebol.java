@@ -60,10 +60,10 @@ public class Futebol {
 
 
     public void startGame(){
-        this.estado = 1;
+        if(estado == 0) this.estado = 1;
     }
     public void endGame(){
-        this.estado = 2;
+        if(estado == 1) this.estado = 2;
     }
     public void goloVisitado(){
         if(this.getEstado() == 1){
