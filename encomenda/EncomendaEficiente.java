@@ -11,7 +11,33 @@ public class EncomendaEficiente {
 
     //Diag classes
     // construtores
-    pbul
+    public  EncomendaEficiente(){
+        this.nomCliente = "n/a";
+        this.numFiscal = 0;
+        this.morada = "n/a";
+        this.numEncomenda = 0;
+        this.data = LocalDateTime.now();
+        linhas = new ArrayList<LinhaEncomenda>();
+    }
+    public EncomendaEficiente(String nomeCliente, int nFiscal, String nmorada,int nEncomenda,LocalDateTime ndata,ArrayList<LinhaEncomenda> nlinhas){
+        this.nomCliente = nomeCliente;
+        this.numFiscal = nFiscal;
+        this.morada = nmorada;
+        this.numEncomenda = nEncomenda;
+        this.data = ndata;
+        this.setLinhaEncomenda(nlinhas);
+
+
+    }
+    public EncomendaEficiente(EncomendaEficiente e){
+        this.nomCliente = e.getnom;
+        this.numFiscal = nFiscal;
+        this.morada = nmorada;
+        this.numEncomenda = nEncomenda;
+        this.data = ndata;
+    }
+
+    
 
 
 
