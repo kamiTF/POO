@@ -37,6 +37,11 @@ public class EncomendaEficiente {
         this.data = e.getData();
         this.setLinhaEncomenda(e.getLinhaEncomenda());
     }
+
+    //getters setters
+
+
+
     public String getNomCliente(){
         return this.nomCliente;
     }
@@ -65,7 +70,9 @@ public class EncomendaEficiente {
         }
         return ret;
     }
-    
+    public void setNomCliente(String nome){
+        this.nomCliente = nome;
+    }
     
     public void setNumFiscal(int nFiscal){
      this.numFiscal = nFiscal;   
@@ -91,28 +98,33 @@ public class EncomendaEficiente {
         }
     }
     
+    
+
+
+
+    
+
+
+
+    
+
+    //equals, toString, clone
+    public boolean equals(Object o){
+        if (this == o) return true;
+        if (( o == null) || (this.getClass() != o.getClass())) return false;
+        EncomendaEficiente c = (EncomendaEficiente) o;
+        return c.getNomCliente()       == this.nomCliente      && 
+               c.getNumFiscal()        == this.numFiscal       &&
+               c.getMorada()           == this.morada          &&
+               c.getNumEncomenda()     == this.numEncomenda    &&
+               c.getData()             == this.data            &&
+               c.getLinhaEncomenda()   == this.linhas;
+              
+    } 
+
     public EncomendaEficiente clone(){
         return new EncomendaEficiente(this);   
     }
-    public boolean equals(Object o){
-     if (this == o) return true;
-     if (( o == null) || (this.getClass() != o.getClass())) return false;
-     EncomendaEficiente c = (EncomendaEficiente) o;
-     return l.getnomCliente() == this.nomCliente && 
-            l.getNumFiscal() == this.numFiscal &&
-            l.getMorada() == this.morada &&
-            l.getNumEncomenda() == this.numEncomenda &&
-            l.getData() == this.data &&
-            l.getLinhas() == this.linhas;
-           
-    } 
-
-
-
-    //getters setters
-
-    //equals, toString, clone
-
     //resolucao do exercicios
 
     // Entregar :
