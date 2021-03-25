@@ -1,6 +1,20 @@
 package encomenda;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+
+
+
+
+
+/*
+########################################################################################################################
+                                            Trabalho realizado por:
+                                            Bruno Jardim        - a91680
+                                            Eduardo Freitas     - a91643
+                                            Pedro Fernandes     - a91699
+########################################################################################################################
+*/
+
 public class EncomendaEficiente {
     private String nomCliente;
     private int numFiscal;
