@@ -5,7 +5,7 @@ public class Futebol {
     private int visitante;
     //Estado: 0-nao iniciado 1-a decorrer 2- terminado
     private int estado;
-
+    
     public Futebol (){
         this.visitado = 0;
         this.visitante = 0;
@@ -14,7 +14,7 @@ public class Futebol {
     public Futebol (int x, int y, int est){
         this.visitado = x;
         this.visitante = y;
-        this.estado=est;
+        this.estado = est;
     }
     public Futebol (Futebol jogo){
         this.visitado = jogo.getVisitado();
@@ -58,23 +58,27 @@ public class Futebol {
         return("Futebol - Visitado: " + this.visitado + "- Visitante: " + this.visitante + "-Estado: " + this.estado);
     }
 
-
+    //a)
     public void startGame(){
         if(this.getEstado() == 0) this.estado = 1;
     }
+    //b)
     public void endGame(){
         if(this.getEstado() == 1) this.estado = 2;
     }
+    //c)
     public void goloVisitado(){
         if(this.getEstado() == 1){
             setVisitado(getVisitado()+1);
         }
     }
+    //d)
     public void goloVisitante(){
         if(this.getEstado()==1){
             setVisitante(getVisitante()+1);
         }
     }
+    //e)
     public String resultadoAtual(){
         return ("Visitado: " + getVisitado() + "Visitante: " + getVisitante() );
     }
