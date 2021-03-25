@@ -130,9 +130,10 @@ public class EncomendaEficiente {
     sb.append("Nome do cliente: ").append(nomCliente)
       .append("\nNumero fiscal: ").append(numFiscal)
       .append("\nMorada: ").append(morada)
-      .append("\nNumero do cliente: ").append(numCliente)
-      .append("\nData da encomenda: ").append(data);
-      .append("\nlinhas da encomenda: ").append(linhas);
+      .append("\nNumero do cliente: ").append(numEncomenda)
+      .append("\nData da encomenda: ").append(data.toString())
+      .append("\nlinhas da encomenda: ").append(linhas.toString());
+
       return sb.toString();
     } 
     //resolucao do exercicios
