@@ -94,7 +94,18 @@ public class EncomendaEficiente {
     public EncomendaEficiente clone(){
         return new EncomendaEficiente(this);   
     }
-
+    public boolean equals(Object o){
+     if (this == o) return true;
+     if (( o == null) || (this.getClass() != o.getClass())) return false;
+     EncomendaEficiente c = (EncomendaEficiente) o;
+     return l.getnomCliente() == this.nomCliente && 
+            l.getNumFiscal() == this.numFiscal &&
+            l.getMorada() == this.morada &&
+            l.getNumEncomenda() == this.numEncomenda &&
+            l.getData() == this.data &&
+            l.getLinhas() == this.linhas;
+           
+    } 
 
 
 
