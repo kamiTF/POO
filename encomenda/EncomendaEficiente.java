@@ -37,7 +37,50 @@ public class EncomendaEficiente {
         this.data = ndata;
     }
 
+    public int getNumFiscal(){
+     return this.numFiscal;
+    }
     
+    public String getMorada(){
+     return this.morada;   
+    }
+    
+    public int getNumEncomenda(){
+     return this.numencomenda;
+    }
+    
+    public LocalDateTime getData(){
+     return this.data;
+    }
+    
+    public ArrayList<LinhaEncomenda> getLinhas(){
+     return this.linhas; 
+    }
+    
+    
+    public void setNumFiscal(int nFiscal){
+     this.numFiscal = nNumFiscal;   
+    }
+    
+    public void setMorada(String nmorada ){
+     this.morada = nMorada;   
+    }
+    
+    public void setNumEncomenda(int nEncomenda ){
+     this.estado = nEstado;   
+    }
+    
+    public void setData(LocalDateTime nData){
+     this.data = ndata;   
+    }
+    
+    public void setlinhaencomenda(ArrayList<LinhaEncomenda> nlinhas){
+     this.linhas = nlinhas;   
+    }
+    
+    public EncomendaEficiente clone(){
+     return new EncomendaEficiente(this);   
+    }
 
 
 
