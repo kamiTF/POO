@@ -125,6 +125,16 @@ public class EncomendaEficiente {
     public EncomendaEficiente clone(){
         return new EncomendaEficiente(this);   
     }
+    public String toString(){
+    StringBuilder sb = new StringBuilder();
+    sb.append("Nome do cliente: ").append(nomCliente)
+      .append("\nNumero fiscal: ").append(numFiscal)
+      .append("\nMorada: ").append(morada)
+      .append("\nNumero do cliente: ").append(numCliente)
+      .append("\nData da encomenda: ").append(data);
+      .append("\nlinhas da encomenda: ").append(linhas);
+      return sb.toString();
+    } 
     //resolucao do exercicios
 
     // Entregar :
