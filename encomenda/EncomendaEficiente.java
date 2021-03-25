@@ -138,6 +138,48 @@ public class EncomendaEficiente {
       return sb.toString();
     } 
     //resolucao do exercicios
+    // ii
+    public double calculaValorTotal(){
+        return linhas.stream().mapToDouble(l-> l.calculaValorLinhaEnc()).sum();
+    }
+    //iii
+    //Tinha nome igual a um metodo definido em LinhaEncomenda daí o nome diferente
+    public double calculaValorDescontoTotal(){
+        return linhas.stream().mapToDouble(l-> l.calculaValorDesconto()).sum();
+    }
+    //iv
+    public int numeroTotalProdutos(){
+        return linhas.stream().mapToInt(l-> l.getQuantidade()).sum();
+    }
+    //v
+    public boolean existeProdutoEncomenda(String refProduto){
+        for (LinhaEncomenda l : linhas){
+            if(l.getReferencia() == refProduto){
+                return true;
+            }
+        }
+        return false;
+    } 
+    //vi
+    public void adicionaLinha(LinhaEncomenda linha){
+        this.linhas.add(linha.clone());
+    }
+    //vii
+    public void removeProduto(String codProd){
+        for (LinhaEncomenda l : linhas){
+            if(l.getReferencia() == codProd){
+                this.linhas.remove(l);
+            }
+        }
+    }
+    
+
+
+
+
+
+
+
 
     // Entregar :
     //LinhaEncomenda, EncomendaEficiente, TesteEncomenda e diag de classes num zip
