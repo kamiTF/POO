@@ -136,8 +136,9 @@ public class LinhaEncomenda {
     
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Referencia: ").append(this.referencia);
-        //..
+        sb  .append("Referencia: ").append(this.referencia)
+            .append("Descri")
+        
         return sb.toString();
     }            
     
