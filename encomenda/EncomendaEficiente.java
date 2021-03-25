@@ -19,13 +19,13 @@ public class EncomendaEficiente {
         this.data = LocalDateTime.now();
         linhas = new ArrayList<LinhaEncomenda>();
     }
-    public EncomendaEficiente(String nomeCliente, int nFiscal, String nmorada,int nEncomenda,LocalDateTime ndata,ArrayList<LinhaEncomenda> nlinhas){
+    public EncomendaEficiente(String nomeCliente, int nFiscal, String nMorada,int nEncomenda,LocalDateTime nData,ArrayList<LinhaEncomenda> nLinhas){
         this.nomCliente = nomeCliente;
         this.numFiscal = nFiscal;
-        this.morada = nmorada;
+        this.morada = nMorada;
         this.numEncomenda = nEncomenda;
-        this.data = ndata;
-        this.setLinhaEncomenda(nlinhas);
+        this.data = nData;
+        this.setLinhaEncomenda(nLinhas);
 
 
     }
@@ -78,8 +78,8 @@ public class EncomendaEficiente {
      this.numFiscal = nFiscal;   
     }
     
-    public void setMorada(String nmorada ){
-     this.morada = nmorada;   
+    public void setMorada(String nMorada ){
+     this.morada = nMorada;   
     }
     
     public void setNumEncomenda(int nEncomenda ){
@@ -125,6 +125,7 @@ public class EncomendaEficiente {
     public EncomendaEficiente clone(){
         return new EncomendaEficiente(this);   
     }
+
     public String toString(){
     StringBuilder sb = new StringBuilder();
     sb.append("Nome do cliente: ").append(nomCliente)
