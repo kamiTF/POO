@@ -140,6 +140,16 @@ public class LinhaEncomenda {
             .append("Descri")
         
         return sb.toString();
-    }            
+    }  
+    public String toString(){
+    StringBuilder sb = new StringBuilder();
+    sb.append("Nome do cliente: ").append(nomCliente)
+      .append("\nNumero fiscal: ").append(numFiscal)
+      .append("\nMorada: ").append(morada)
+      .append("\nNumero do cliente: ").append(numCliente)
+      .append("\nData da encomenda: ").append(data.toString());
+      .append("\nlinhas da encomenda: ").append(linhas.toString());
+      return sb.toString();
+    } 
     
 }
