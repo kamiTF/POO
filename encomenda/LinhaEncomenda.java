@@ -137,19 +137,13 @@ public class LinhaEncomenda {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb  .append("Referencia: ").append(this.referencia)
-            .append("Descri")
+            .append("\nDescrição: ").append(this.descricao)
+            .append("\nPreço: ").append(this.preco)
+            .append("\nQuantidade: ").append(this.quantidade)
+            .append("\nImposto: ").append(this.imposto)
+            .append("\nDesconto").append(this.desconto);
         
         return sb.toString();
-    }  
-    public String toString(){
-    StringBuilder sb = new StringBuilder();
-    sb.append("Nome do cliente: ").append(nomCliente)
-      .append("\nNumero fiscal: ").append(numFiscal)
-      .append("\nMorada: ").append(morada)
-      .append("\nNumero do cliente: ").append(numCliente)
-      .append("\nData da encomenda: ").append(data.toString());
-      .append("\nlinhas da encomenda: ").append(linhas.toString());
-      return sb.toString();
-    } 
+    }            
     
 }
