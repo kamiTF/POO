@@ -30,11 +30,15 @@ public class EncomendaEficiente {
 
     }
     public EncomendaEficiente(EncomendaEficiente e){
-        this.nomCliente = e.getnom;
-        this.numFiscal = nFiscal;
-        this.morada = nmorada;
-        this.numEncomenda = nEncomenda;
-        this.data = ndata;
+        this.nomCliente = e.getNomCliente();
+        this.numFiscal = e.getNumFiscal();
+        this.morada = e.getMorada();
+        this.numEncomenda = e.getNumEncomenda();
+        this.data = e.getData();
+        this.setLinhaEncomenda(e.getLinhaEncomenda());
+    }
+    public String getNomCliente(){
+        return this.nomCliente;
     }
 
     public int getNumFiscal(){
@@ -46,40 +50,49 @@ public class EncomendaEficiente {
     }
     
     public int getNumEncomenda(){
-     return this.numencomenda;
+     return this.numEncomenda;
     }
     
     public LocalDateTime getData(){
      return this.data;
     }
     
-    public ArrayList<LinhaEncomenda> getLinhas(){
-     return this.linhas; 
+    public ArrayList<LinhaEncomenda> getLinhaEncomenda(){
+
+        ArrayList<LinhaEncomenda> ret = new ArrayList<>();
+        for(LinhaEncomenda linha : this.linhas){
+            ret.add(linha.clone());
+        }
+        return ret;
     }
     
     
     public void setNumFiscal(int nFiscal){
-     this.numFiscal = nNumFiscal;   
+     this.numFiscal = nFiscal;   
     }
     
     public void setMorada(String nmorada ){
-     this.morada = nMorada;   
+     this.morada = nmorada;   
     }
     
     public void setNumEncomenda(int nEncomenda ){
-     this.estado = nEstado;   
+     this.numEncomenda = nEncomenda;   
     }
     
     public void setData(LocalDateTime nData){
-     this.data = ndata;   
+     this.data = nData;   
     }
     
-    public void setlinhaencomenda(ArrayList<LinhaEncomenda> nlinhas){
-     this.linhas = nlinhas;   
+    public void setLinhaEncomenda(ArrayList<LinhaEncomenda> l){
+
+        this.linhas = new ArrayList<>();
+        for (LinhaEncomenda linha: l){
+            this.linhas.add(linha.clone());
+        }
     }
     
     public EncomendaEficiente clone(){
-     return new EncomendaEficiente(this);   
+        return new EncomendaEficiente(this);   
     }
 
 
