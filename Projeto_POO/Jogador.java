@@ -106,10 +106,11 @@ public class Jogador {
     //EQUALS , TOSTRING E CLONE
 
 
+
+
     public boolean equals(Object object) {
         if (this == object) return true;
         if (object == null || getClass() != object.getClass()) return false;
-        if (!super.equals(object)) return false;
         Jogador jogador = (Jogador) object;
         return velocidade == jogador.velocidade &&
                 resistencia == jogador.resistencia &&
