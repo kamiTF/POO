@@ -136,7 +136,7 @@ public class Jogador {
                 + "\nCapacidade de passe" + this.capacidadePasse);
     }
 }
-/*
+
 
 public class GRedes extends Jogador{
     //Classe Guarda Redes criada a partir de uma super classe Jogador
@@ -165,16 +165,16 @@ public class GRedes extends Jogador{
     }
     public GRedes(GRedes g){
         super(g);
-        this.elasticidade = g.getElasticidade()
+        this.elasticidade = g.getElasticidade();
     }
 
 
     //TOSTRING , CLONE E EQUALS
     public String toString(){
-        return (super.toString()+ "\nElasticidade: " + this.elasticidade)
+        return (super.toString()+ "\nElasticidade: " + this.elasticidade);
     }
     public GRedes clone(){
-        return new GRedes(this)
+        return new GRedes(this);
     }
 
 
@@ -194,7 +194,7 @@ public class GRedes extends Jogador{
 
     }
 }
-*/
+
 
 
 
