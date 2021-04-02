@@ -1,4 +1,4 @@
-package Projeto_POO;
+package Projeto_POO.src;
 
 public class Jogador {
 
@@ -21,7 +21,7 @@ public class Jogador {
 
     //CONSTRUTOR VAZIO
     public Jogador() {
-        this.pos = Posicao.MEDIO
+        this.pos = Posicao.MEDIO;
         this.velocidade = 50;
         this.resistencia = 50;
         this.destreza = 50;
@@ -112,11 +112,11 @@ public class Jogador {
         this.capacidadePasse = capacidadePasse;
     }
 
-    public Projeto_POO.Jogador.Posicao getPos() {
+    public Posicao getPos() {
         return pos;
     }
 
-    public void setPos(Projeto_POO.Jogador.Posicao pos) {
+    public void setPos(Posicao pos) {
         this.pos = pos;
     }
 
@@ -155,65 +155,6 @@ public class Jogador {
                 + "\nJogo de cabeça: " + this.jogoCabeca
                 + "\nRemate: " + this.remate
                 + "\nCapacidade de passe" + this.capacidadePasse);
-    }
-}
-
-
-public class GRedes extends Jogador{
-    //Classe Guarda Redes criada a partir de uma super classe Jogador
-    private int elasticidade;
-
-
-    //GETTERS E SETTERS
-    public int getElasticidade() {
-        return elasticidade;
-    }
-
-    public void setElasticidade(int elasticidade) {
-        this.elasticidade = elasticidade;
-    }
-    //FIM GETTERS E SETTERS
-
-
-    //CONSTRUTORES
-    public GRedes(){
-        super(Posicao.GREDES,50,50,50,50,50,50,50);
-        this.elasticidade = 50;
-    }
-    public GRedes(int vel, int res, int des, int imp, int jC, int rem, int cP, int elas){
-        super(Posicao.GREDES,vel, res, des, imp, jC, rem, cP);
-        this.elasticidade = elas;
-    }
-    public GRedes(GRedes g){
-        super(g);
-        this.elasticidade = g.getElasticidade();
-    }
-
-
-    //TOSTRING , CLONE E EQUALS
-    public String toString(){
-        return (super.toString()+ "\nElasticidade: " + this.elasticidade);
-    }
-    public GRedes clone(){
-        return new GRedes(this);
-    }
-
-
-    public boolean equals(Object g) {
-        if (this == object) return true;
-        if (object == null || getClass() != object.getClass()) return false;
-        if (!super.equals(object)) return false;
-        GRedes gredes = (GRedes) object;
-        return  pos = gredes.getPos()                       &&
-                velocidade == gredes.velocidade             &&
-                resistencia == gredes.resistencia           &&
-                destreza == gredes.destreza                 &&
-                impulsão == gredes.impulsão                 &&
-                jogoCabeca == gredes.jogoCabeca             &&
-                remate == gredes.remate                     &&
-                capacidadePasse == gredes.capacidadePasse   &&
-                elasticidade == gredes.elasticidade;
-
     }
 }
 
