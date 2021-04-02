@@ -2,7 +2,14 @@ package Projeto_POO;
 
 public class Jogador {
 
-
+    public enum Posicao{
+        GREDES,
+        DEFESA,
+        MEDIO,
+        AVANCADO,
+        LATERAL
+    }
+    private Posicao pos;
     private int velocidade;
     private int resistencia;
     private int destreza;
@@ -14,6 +21,7 @@ public class Jogador {
 
     //CONSTRUTOR VAZIO
     public Jogador() {
+        this.pos = Posicao.MEDIO
         this.velocidade = 50;
         this.resistencia = 50;
         this.destreza = 50;
@@ -24,7 +32,8 @@ public class Jogador {
     }
 
     //CONSTRUTOR PARAMETRIZADO
-    public Jogador(int vel, int res, int des, int imp, int jC, int rem, int cP) {
+    public Jogador(Posicao p,int vel, int res, int des, int imp, int jC, int rem, int cP) {
+        this.pos = p;
         this.velocidade = vel;
         this.resistencia = res;
         this.destreza = des;
@@ -36,6 +45,7 @@ public class Jogador {
 
     //CONSTRUTOR DE CÓPIA
     public Jogador(Jogador j) {
+        this.pos = j.getPos();
         this.velocidade = j.getVelocidade();
         this.resistencia = j.getResistencia();
         this.destreza = j.getDestreza();
@@ -101,6 +111,16 @@ public class Jogador {
     public void setCapacidadePasse(int capacidadePasse) {
         this.capacidadePasse = capacidadePasse;
     }
+
+    public Projeto_POO.Jogador.Posicao getPos() {
+        return pos;
+    }
+
+    public void setPos(Projeto_POO.Jogador.Posicao pos) {
+        this.pos = pos;
+    }
+
+
     //FIM GETTERS E SETTERS
 
     //EQUALS , TOSTRING E CLONE
@@ -127,6 +147,7 @@ public class Jogador {
 
     public String toString() {
         return ("Atributos do jogador:\n"
+                + "Posição: " + this.pos
                 + "Velocidade: " + this.velocidade
                 + "\nResistência: " + this.resistencia
                 + "\nDestreza: " + this.destreza
@@ -156,11 +177,11 @@ public class GRedes extends Jogador{
 
     //CONSTRUTORES
     public GRedes(){
-        super();
+        super(Posicao.GREDES,50,50,50,50,50,50,50);
         this.elasticidade = 50;
     }
     public GRedes(int vel, int res, int des, int imp, int jC, int rem, int cP, int elas){
-        super(vel, res, des, imp, jC, rem, cP);
+        super(Posicao.GREDES,vel, res, des, imp, jC, rem, cP);
         this.elasticidade = elas;
     }
     public GRedes(GRedes g){
@@ -183,13 +204,14 @@ public class GRedes extends Jogador{
         if (object == null || getClass() != object.getClass()) return false;
         if (!super.equals(object)) return false;
         GRedes gredes = (GRedes) object;
-        return velocidade == gredes.velocidade           &&
-                resistencia == gredes.resistencia          &&
-                destreza == gredes.destreza                &&
-                impulsão == gredes.impulsão                &&
-                jogoCabeca == gredes.jogoCabeca            &&
-                remate == gredes.remate                    &&
-                capacidadePasse == gredes.capacidadePasse  &&
+        return  pos = gredes.getPos()                       &&
+                velocidade == gredes.velocidade             &&
+                resistencia == gredes.resistencia           &&
+                destreza == gredes.destreza                 &&
+                impulsão == gredes.impulsão                 &&
+                jogoCabeca == gredes.jogoCabeca             &&
+                remate == gredes.remate                     &&
+                capacidadePasse == gredes.capacidadePasse   &&
                 elasticidade == gredes.elasticidade;
 
     }
