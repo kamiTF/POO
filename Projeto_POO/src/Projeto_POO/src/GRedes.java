@@ -1,6 +1,8 @@
 package Projeto_POO.src;
 import Projeto_POO.src.Jogador;
-public class GRedes extends Projeto_POO.src.Jogador {
+
+
+public class GRedes extends Jogador {
     //Classe Guarda Redes criada a partir de uma super classe Jogador
     private Posicao pos;
     private int velocidade;
@@ -53,7 +55,8 @@ public class GRedes extends Projeto_POO.src.Jogador {
         return (super.toString() + "\nElasticidade: " + this.elasticidade);
     }
 
-    public GRedes clone() {
+    public GRedes clone() throws CloneNotSupportedException {
+        GRedes gRedes = (GRedes) super.clone();
         return new GRedes(this);
     }
 

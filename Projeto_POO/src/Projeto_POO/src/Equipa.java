@@ -10,20 +10,20 @@ public class Equipa{
     public Equipa(){
         jogadores = new ArrayList<Jogador>();
     }
-    public Equipa(ArrayList<Jogador> j){
+    public Equipa(ArrayList<Jogador> j) throws CloneNotSupportedException {
         this.setJogadores(j);
     }
-    public Equipa(Equipa e){
+    public Equipa(Equipa e) throws CloneNotSupportedException {
         this.setJogadores(e.getJogadores());
     }
-    public void setJogadores(ArrayList<Jogador> j){
+    public void setJogadores(ArrayList<Jogador> j) throws CloneNotSupportedException {
         jogadores = new ArrayList<Jogador>();
         for(Jogador jog: j){
             this.jogadores.add(jog.clone());
         }
     }
 
-    public ArrayList<Jogador> getJogadores() {
+    public ArrayList<Jogador> getJogadores() throws CloneNotSupportedException {
         ArrayList<Jogador> ret = new ArrayList<>();
         for(Jogador jog : this.jogadores){
             ret.add(jog.clone());

@@ -141,7 +141,8 @@ public class Jogador {
                 capacidadePasse == jogador.capacidadePasse;
     }
 
-    public Jogador clone() {
+    public Jogador clone() throws CloneNotSupportedException {
+        Jogador jogador = (Jogador) super.clone();
         return new Jogador(this);
     }
 
