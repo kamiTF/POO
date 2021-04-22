@@ -2,7 +2,7 @@ package casainteligente.casainteligente;
 
 public class SmartSpeaker extends SmartDevice {
 
-    public static final int MAX = 20;
+    public static final int MAX = 25;
     private String channel;
     private int volume;
 
@@ -13,13 +13,13 @@ public class SmartSpeaker extends SmartDevice {
     }
     public SmartSpeaker(String id){
         super(id);
-        channel = "";
-        volume = 50;
+        this.channel = "";
+        this.volume = 10;
     }
     public SmartSpeaker(String id, String nchannel, int nvolume){
         super(id);
-        channel = nchannel;
-        volume = nvolume;
+        this.channel = nchannel;
+        this.volume = nvolume;
     }
 
     public int getVolume() {
@@ -29,7 +29,7 @@ public class SmartSpeaker extends SmartDevice {
         volume = n;
     }
     public void volumeUp() {
-        if (this.getVolume() < 20) {
+        if (this.getVolume() < 25) {
             this.setVolume(getVolume() + 1);
         }
     }
