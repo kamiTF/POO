@@ -14,7 +14,7 @@ public class SmartDevice {
         this.id = nID;
         this.on = false;
     }
-    public SmartDevice(String nID, Boolean state){
+    public SmartDevice(String nID, boolean state){
         this.id = nID;
         this.on = state;
     }
@@ -50,10 +50,10 @@ public class SmartDevice {
     public String getId(){
         return id;
     }
-    public Boolean getOn(){
+    public boolean getOn(){
         return on;
     }
-    public void setOn(Boolean state){
+    public void setOn(boolean state){
         this.on = state;
     }
     public void setId(String nId){
