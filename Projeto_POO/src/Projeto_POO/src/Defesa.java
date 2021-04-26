@@ -1,5 +1,4 @@
-import Projeto_POO.src.Jogador;
-import Projeto_POO.src.Lateral;
+package Projeto_POO.src;
 
 public class Defesa extends Jogador {
     private int desarme;
