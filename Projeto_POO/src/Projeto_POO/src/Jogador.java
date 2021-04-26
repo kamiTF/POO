@@ -1,15 +1,21 @@
 package Projeto_POO.src;
 
 public class Jogador {
-
+/*
     public enum Posicao{
         GREDES,
         DEFESA,
         MEDIO,
         AVANCADO,
         LATERAL
-    }
-    private Posicao pos;
+    }*/
+    public static final int GREDES = 1;
+    public static final int DEFESA = 2;
+    public static final int MEDIO = 4;
+    public static final int AVANCADO = 5;
+    public static final int LATERAL = 3;
+
+    private int pos;
     private int velocidade;
     private int resistencia;
     private int destreza;
@@ -21,7 +27,7 @@ public class Jogador {
 
     //CONSTRUTOR VAZIO
     public Jogador() {
-        this.pos = Posicao.MEDIO;
+        this.pos = Jogador.MEDIO;
         this.velocidade = 50;
         this.resistencia = 50;
         this.destreza = 50;
@@ -30,9 +36,20 @@ public class Jogador {
         this.remate = 50;
         this.capacidadePasse = 50;
     }
+    public Jogador(int p){
+        this.pos = p;
+        this.velocidade = 50;
+        this.resistencia = 50;
+        this.destreza = 50;
+        this.impulsao = 50;
+        this.jogoCabeca = 50;
+        this.remate = 50;
+        this.capacidadePasse = 50;
+
+    }
 
     //CONSTRUTOR PARAMETRIZADO
-    public Jogador(Posicao p,int vel, int res, int des, int imp, int jC, int rem, int cP) {
+    public Jogador(int p,int vel, int res, int des, int imp, int jC, int rem, int cP) {
         this.pos = p;
         this.velocidade = vel;
         this.resistencia = res;
@@ -112,11 +129,11 @@ public class Jogador {
         this.capacidadePasse = capacidadePasse;
     }
 
-    public Posicao getPos() {
+    public int getPos() {
         return pos;
     }
 
-    public void setPos(Posicao pos) {
+    public void setPos(int pos) {
         this.pos = pos;
     }
 
@@ -132,17 +149,17 @@ public class Jogador {
         if (this == object) return true;
         if (object == null || getClass() != object.getClass()) return false;
         Jogador jogador = (Jogador) object;
-        return velocidade == jogador.velocidade &&
-                resistencia == jogador.resistencia &&
-                destreza == jogador.destreza &&
-                impulsao == jogador.impulsao &&
-                jogoCabeca == jogador.jogoCabeca &&
-                remate == jogador.remate &&
+        return  pos             == jogador.pos          &&
+                velocidade      == jogador.velocidade   &&
+                resistencia     == jogador.resistencia  &&
+                destreza        == jogador.destreza     &&
+                impulsao        == jogador.impulsao     &&
+                jogoCabeca      == jogador.jogoCabeca   &&
+                remate          == jogador.remate       &&
                 capacidadePasse == jogador.capacidadePasse;
     }
 
-    public Jogador clone() throws CloneNotSupportedException {
-        Jogador jogador = (Jogador) super.clone();
+    public Jogador clone(){
         return new Jogador(this);
     }
 

@@ -1,11 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1d43eb72-ec04-424e-ae31-ee3320bacdd2" name="Default Changelist" comment="Small tweaks" />
+    <list default="true" id="1d43eb72-ec04-424e-ae31-ee3320bacdd2" name="Default Changelist" comment="Small tweaks">
+      <change afterPath="$PROJECT_DIR$/src/Defesa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Projeto_POO/src/Avancado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Projeto_POO/src/Lateral.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Projeto_POO/src/Medio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Projeto_POO/src/Equipa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projeto_POO/src/Equipa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Projeto_POO/src/GRedes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projeto_POO/src/GRedes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Projeto_POO/src/Jogador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projeto_POO/src/Jogador.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />

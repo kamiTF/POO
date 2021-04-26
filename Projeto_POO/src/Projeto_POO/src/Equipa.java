@@ -2,33 +2,32 @@ package Projeto_POO.src;
 import Projeto_POO.src.Jogador;
 import Projeto_POO.src.GRedes;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public class Equipa{
-    private ArrayList<Jogador> jogadores;
+    private Map<Integer ,Jogador> jogadores;
 
 
     public Equipa(){
-        jogadores = new ArrayList<Jogador>();
+        jogadores = new HashMap<>();
     }
-    public Equipa(ArrayList<Jogador> j) throws CloneNotSupportedException {
+    public Equipa(Map<Integer , Jogador> j) {
         this.setJogadores(j);
     }
-    public Equipa(Equipa e) throws CloneNotSupportedException {
+    public Equipa(Equipa e)  {
         this.setJogadores(e.getJogadores());
     }
-    public void setJogadores(ArrayList<Jogador> j) throws CloneNotSupportedException {
-        jogadores = new ArrayList<Jogador>();
-        for(Jogador jog: j){
-            this.jogadores.add(jog.clone());
+    public void setJogadores(Map<Integer ,Jogador> j) {
+        jogadores = new HashMap<>();
+        for(Jogador jog: j.values()){
+            jogadores.put(jog.getPos(),jog.clone());
         }
     }
 
-    public ArrayList<Jogador> getJogadores() throws CloneNotSupportedException {
-        ArrayList<Jogador> ret = new ArrayList<>();
-        for(Jogador jog : this.jogadores){
-            ret.add(jog.clone());
-        }
-        return ret;
+    public Map<Integer ,Jogador> getJogadores()  {
+        return jogadores.values().stream().collect(Collectors.toMap(Jogador::getPos,Jogador::clone));
     }
 
 
