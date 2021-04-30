@@ -45,4 +45,18 @@ public class Avancado extends Jogador{
         sb.append(super.toString()).append("Aceleracao: ").append(this.getAceleracao());
         return sb.toString();
     }
+    public int eval(){
+        int overall = 100;
+        overall = (int) (overall    -(((100-this.getAceleracao())       *0.95)
+                                    + ((100-this.getVelocidade())       *0.9)
+                                    + ((100-this.getResistencia())      *0.7)
+                                    + ((100-this.getDestreza())         *0.9)
+                                    + ((100-this.getImpulsao())         *0.7)
+                                    + ((100-this.getJogoCabeca())       *0.9)
+                                    + ((100-this.getRemate())           *0.5)
+                                    + ((100-this.getCapacidadePasse())  *0.5))/8);
+
+
+        return overall;
+    }
 }

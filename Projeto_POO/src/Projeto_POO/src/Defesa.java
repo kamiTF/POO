@@ -2,6 +2,8 @@ package Projeto_POO.src;
 
 public class Defesa extends Jogador {
     private int desarme;
+
+
     public Defesa(){
         super(DEFESA);
         this.desarme = 50;
@@ -39,7 +41,20 @@ public class Defesa extends Jogador {
         sb.append(super.toString()).append("Desarme: ").append(this.getDesarme());
         return sb.toString();
     }
+    public int eval(){
+        int overall = 100;
+        overall = (int) (overall    -(((100-this.getDesarme())          *0.95)
+                                    + ((100-this.getVelocidade())       *0.4)
+                                    + ((100-this.getResistencia())      *0.5)
+                                    + ((100-this.getDestreza())         *0.7)
+                                    + ((100-this.getImpulsao())         *0.7)
+                                    + ((100-this.getJogoCabeca())       *0.8)
+                                    + ((100-this.getRemate())           *0.5)
+                                    + ((100-this.getCapacidadePasse())  *0.9))/8);
 
+
+        return overall;
+    }
 
 
 

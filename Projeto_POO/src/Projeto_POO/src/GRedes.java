@@ -1,5 +1,5 @@
 package Projeto_POO.src;
-import Projeto_POO.src.Jogador;
+
 
 
 public class GRedes extends Jogador {
@@ -41,8 +41,7 @@ public class GRedes extends Jogador {
         return (super.toString() + "\nElasticidade: " + this.elasticidade);
     }
 
-    public GRedes clone()  {
-        GRedes gRedes = (GRedes) super.clone();
+    public GRedes clone() {
         return new GRedes(this);
     }
 
@@ -54,5 +53,19 @@ public class GRedes extends Jogador {
         GRedes gredes = (GRedes) object;
         return gredes.equals(this) & gredes.getElasticidade() == this.elasticidade;
 
+    }
+    public int eval(){
+        int overall = 100;
+        overall = (int) (overall    -(((100-this.getElasticidade())       *0.95)
+                                    //Nao precisa de velocidade
+                                    //Nao precisa de resitencia
+                                    + ((100-this.getDestreza())         *0.6)
+                                    + ((100-this.getImpulsao())         *0.9)
+                                    + ((100-this.getJogoCabeca())       *0.1)
+                                    + ((100-this.getRemate())           *0.6)
+                                    + ((100-this.getCapacidadePasse())  *0.9))/6);
+
+
+        return overall;
     }
 }

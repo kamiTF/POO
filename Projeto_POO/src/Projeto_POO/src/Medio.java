@@ -51,7 +51,20 @@ public class Medio extends Jogador {
         return sb.toString();
     }
 
+    public int eval(){
+        int overall = 100;
+        overall = (int) (overall    -(((100-this.getRecBolas())         *0.95)
+                                    + ((100-this.getVelocidade())       *0.7)
+                                    + ((100-this.getResistencia())      *0.7)
+                                    + ((100-this.getDestreza())         *0.6)
+                                    + ((100-this.getImpulsao())         *0.4)
+                                    + ((100-this.getJogoCabeca())       *0.3)
+                                    + ((100-this.getRemate())           *0.5)
+                                    + ((100-this.getCapacidadePasse())  *0.9))/8);
 
+
+        return overall;
+    }
 
 
 }

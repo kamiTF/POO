@@ -1,14 +1,7 @@
 package Projeto_POO.src;
 
-public class Jogador {
-/*
-    public enum Posicao{
-        GREDES,
-        DEFESA,
-        MEDIO,
-        AVANCADO,
-        LATERAL
-    }*/
+public abstract class Jogador {
+
     public static final int GREDES = 1;
     public static final int DEFESA = 2;
     public static final int MEDIO = 4;
@@ -159,9 +152,9 @@ public class Jogador {
                 capacidadePasse == jogador.capacidadePasse;
     }
 
-    public Jogador clone(){
-        return new Jogador(this);
-    }
+    public abstract Jogador clone();
+
+
 
     public String toString() {
         return ("Atributos do jogador:\n"
@@ -174,6 +167,7 @@ public class Jogador {
                 + "\nRemate: " + this.remate
                 + "\nCapacidade de passe" + this.capacidadePasse);
     }
+    public abstract int eval();
 }
 
 

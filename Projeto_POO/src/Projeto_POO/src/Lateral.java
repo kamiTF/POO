@@ -45,5 +45,22 @@ public class Lateral extends Jogador{
         sb.append(super.toString()).append("Capacidade de Cruzamento: ").append(this.getCruzamento());
         return sb.toString();
     }
+    public int eval(){
+        int overall = 100;
+        overall = (int) (overall    -(((100-this.getCruzamento())       *0.95)
+                                    + ((100-this.getVelocidade())       *0.9)
+                                    + ((100-this.getResistencia())      *0.7)
+                                    + ((100-this.getDestreza())         *0.6)
+                                    + ((100-this.getImpulsao())         *0.4)
+                                    + ((100-this.getJogoCabeca())       *0.3)
+                                    + ((100-this.getRemate())           *0.5)
+                                    + ((100-this.getCapacidadePasse())  *0.9))/8);
+
+
+        return overall;
+    }
+
+
+
 
 }
