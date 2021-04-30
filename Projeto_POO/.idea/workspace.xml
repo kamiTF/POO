@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1d43eb72-ec04-424e-ae31-ee3320bacdd2" name="Default Changelist" comment="Small tweaks">
-      <change afterPath="$PROJECT_DIR$/src/Defesa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Projeto_POO/src/Avancado.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Projeto_POO/src/Lateral.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Projeto_POO/src/Medio.java" afterDir="false" />
+    <list default="true" id="1d43eb72-ec04-424e-ae31-ee3320bacdd2" name="Default Changelist" comment="Classes:&#10;-Avancado&#10;-Defesa&#10;-Lateral&#10;-Medio&#10;&#10;Small Tweaks:&#10;-GRedes&#10;-Jogador: enum para static final int">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Projeto_POO/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Projeto_POO.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Projeto_POO.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Projeto_POO/src/Avancado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projeto_POO/src/Avancado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Projeto_POO/src/Defesa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projeto_POO/src/Defesa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Projeto_POO/src/Equipa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projeto_POO/src/Equipa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Projeto_POO/src/GRedes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projeto_POO/src/GRedes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Projeto_POO/src/Jogador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projeto_POO/src/Jogador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Projeto_POO/src/Lateral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projeto_POO/src/Lateral.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Projeto_POO/src/Medio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projeto_POO/src/Medio.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -35,8 +42,45 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Projeto_POO.src.Main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Projeto_POO.src.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Projeto_POO.src.Main" />
+      <module name="Projeto_POO" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Projeto_POO.src.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main (1)" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -61,7 +105,21 @@
       <option name="project" value="LOCAL" />
       <updated>1617401430347</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Classes:&#10;-Avancado&#10;-Defesa&#10;-Lateral&#10;-Medio&#10;&#10;Small Tweaks:&#10;-GRedes&#10;-Jogador: enum para static final int">
+      <created>1619437436725</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1619437436725</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Classes:&#10;-Avancado&#10;-Defesa&#10;-Lateral&#10;-Medio&#10;&#10;Small Tweaks:&#10;-GRedes&#10;-Jogador: enum para static final int">
+      <created>1619437490708</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1619437490708</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -78,6 +136,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Small tweaks" />
-    <option name="LAST_COMMIT_MESSAGE" value="Small tweaks" />
+    <MESSAGE value="Classes:&#10;-Avancado&#10;-Defesa&#10;-Lateral&#10;-Medio&#10;&#10;Small Tweaks:&#10;-GRedes&#10;-Jogador: enum para static final int" />
+    <option name="LAST_COMMIT_MESSAGE" value="Classes:&#10;-Avancado&#10;-Defesa&#10;-Lateral&#10;-Medio&#10;&#10;Small Tweaks:&#10;-GRedes&#10;-Jogador: enum para static final int" />
   </component>
 </project>
