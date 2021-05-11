@@ -11,8 +11,8 @@ public class Medio extends Jogador {
         this.recBolas = 50;
     }
     //CONTRUTOR PARAMETERIZADO
-    public Medio(int vel, int res , int des , int imp , int jC, int rem, int cP, int recBol){
-        super(Jogador.MEDIO,vel,res,des,imp,jC,rem,cP);
+    public Medio(int num,int vel, int res , int des , int imp , int jC, int rem, int cP, int recBol){
+        super(Jogador.MEDIO,num,vel,res,des,imp,jC,rem,cP);
         this.recBolas = recBol;
 
     }

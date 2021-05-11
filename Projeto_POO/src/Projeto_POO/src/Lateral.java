@@ -9,8 +9,8 @@ public class Lateral extends Jogador{
         super(Jogador.LATERAL);
         this.cruzamento = 50;
     }
-    public Lateral(int vel , int res , int des , int imp , int jC, int rem , int cP, int cruz){
-        super(Jogador.LATERAL,vel,res,des,imp,jC,rem,cP);
+    public Lateral(int num ,int vel , int res , int des , int imp , int jC, int rem , int cP, int cruz){
+        super(Jogador.LATERAL,num,vel,res,des,imp,jC,rem,cP);
         this.cruzamento = cruz;
     }
     public Lateral (Lateral lateral){

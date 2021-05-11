@@ -9,6 +9,7 @@ public abstract class Jogador {
     public static final int LATERAL = 3;
 
     private int pos;
+    private int numero;
     private int velocidade;
     private int resistencia;
     private int destreza;
@@ -21,6 +22,7 @@ public abstract class Jogador {
     //CONSTRUTOR VAZIO
     public Jogador() {
         this.pos = Jogador.MEDIO;
+        this.numero = 0;
         this.velocidade = 50;
         this.resistencia = 50;
         this.destreza = 50;
@@ -31,6 +33,7 @@ public abstract class Jogador {
     }
     public Jogador(int p){
         this.pos = p;
+        this.numero = 0;
         this.velocidade = 50;
         this.resistencia = 50;
         this.destreza = 50;
@@ -41,9 +44,12 @@ public abstract class Jogador {
 
     }
 
+
+
     //CONSTRUTOR PARAMETRIZADO
-    public Jogador(int p,int vel, int res, int des, int imp, int jC, int rem, int cP) {
+    public Jogador(int p,int num,int vel, int res, int des, int imp, int jC, int rem, int cP) {
         this.pos = p;
+        this.numero = num;
         this.velocidade = vel;
         this.resistencia = res;
         this.destreza = des;
@@ -66,6 +72,10 @@ public abstract class Jogador {
     }
 
     //GETTERS E SETTERS
+    public int getNumero() { return numero;}
+
+    public void setNumero(int numero) { this.numero = numero;}
+
     public int getVelocidade() {
         return velocidade;
     }

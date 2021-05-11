@@ -4,35 +4,47 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class Equipa{
-    private Map<Integer ,Jogador> jogadores;
-
+    private Map<Integer ,Jogador> jogadoresTitulares;
+    private Map<Integer ,Jogador> jogadoresBanco;
 
     public Equipa(){
-        jogadores = new HashMap<>();
+        jogadoresTitulares = new HashMap<>();
+        jogadoresBanco= new HashMap<>();
     }
-    public Equipa(Map<Integer , Jogador> j) {
-        this.setJogadores(j);
+    public Equipa(Map<Integer , Jogador> jT,Map<Integer , Jogador> jB) {
+        this.setJogadoresTitulares(jT);
+        this.setJogadoresBanco(jB);
     }
     public Equipa(Equipa e)  {
-        this.setJogadores(e.getJogadores());
+        this.setJogadoresTitulares(e.getJogadoresTitulares());
+        this.setJogadoresBanco(e.getJogadoresBanco());
     }
 
-    public void setJogadores(Map<Integer ,Jogador> j) {
-        jogadores = new HashMap<>();
+    public void setJogadoresTitulares(Map<Integer ,Jogador> j) {
+        jogadoresTitulares = new HashMap<>();
         for(Jogador jog: j.values()){
-            jogadores.put(jog.getPos(),jog.clone());
+            jogadoresTitulares.put(jog.getNumero(),jog.clone());
+        }
+    }
+    public void setJogadoresBanco(Map<Integer ,Jogador> j) {
+        jogadoresBanco = new HashMap<>();
+        for(Jogador jog: j.values()){
+            jogadoresBanco.put(jog.getNumero(),jog.clone());
         }
     }
 
-    public Map<Integer ,Jogador> getJogadores()  {
-        return jogadores.values().stream().collect(Collectors.toMap(Jogador::getPos,Jogador::clone));
+    public Map<Integer ,Jogador> getJogadoresTitulares()  {
+        return jogadoresTitulares.values().stream().collect(Collectors.toMap(Jogador::getNumero,Jogador::clone));
     }
-    public int equipaOverAll(Map<Integer, Jogador> equipa){
+    public Map<Integer ,Jogador> getJogadoresBanco()  {
+        return jogadoresBanco.values().stream().collect(Collectors.toMap(Jogador::getNumero,Jogador::clone));
+    }
+    public int equipaOverAll(Equipa e){
         int average = 0;
-        for(Jogador j : equipa.values()){
+        for(Jogador j : e.getJogadoresTitulares().values()){
             average += j.eval();
         }
-        return average/equipa.values().size();
+        return average/e.getJogadoresTitulares().values().size();
     }
 
 

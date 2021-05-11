@@ -8,8 +8,8 @@ public class Defesa extends Jogador {
         super(DEFESA);
         this.desarme = 50;
     }
-    public Defesa(int vel , int res , int des , int imp , int jC, int rem , int cP, int desar){
-        super(Jogador.DEFESA,vel,res,des,imp,jC,rem,cP);
+    public Defesa(int num,int vel , int res , int des , int imp , int jC, int rem , int cP, int desar){
+        super(Jogador.DEFESA,num,vel,res,des,imp,jC,rem,cP);
         this.desarme = desar;
     }
     public Defesa(Defesa defesa){

@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1d43eb72-ec04-424e-ae31-ee3320bacdd2" name="Default Changelist" comment="Classes:&#10;-Avancado&#10;-Defesa&#10;-Lateral&#10;-Medio&#10;&#10;Small Tweaks:&#10;-GRedes&#10;-Jogador: enum para static final int">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Projeto_POO/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Projeto_POO.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Projeto_POO.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="1d43eb72-ec04-424e-ae31-ee3320bacdd2" name="Default Changelist" comment="idk">
+      <change afterPath="$PROJECT_DIR$/src/Projeto_POO/src/Jogo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Projeto POO/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Projeto_POO/src/Avancado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projeto_POO/src/Avancado.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Projeto_POO/src/Defesa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projeto_POO/src/Defesa.java" afterDir="false" />
@@ -13,6 +11,7 @@
       <change beforePath="$PROJECT_DIR$/src/Projeto_POO/src/GRedes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projeto_POO/src/GRedes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Projeto_POO/src/Jogador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projeto_POO/src/Jogador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Projeto_POO/src/Lateral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projeto_POO/src/Lateral.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Projeto_POO/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projeto_POO/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Projeto_POO/src/Medio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projeto_POO/src/Medio.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -119,7 +118,28 @@
       <option name="project" value="LOCAL" />
       <updated>1619437490708</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Avaliacoes das diferentes posicoes (might need some changes)">
+      <created>1619778567986</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1619778567986</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Class main para executar pequenos testes">
+      <created>1619778597528</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1619778597528</updated>
+    </task>
+    <task id="LOCAL-00007" summary="idk">
+      <created>1619778644557</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1619778644557</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -137,6 +157,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Small tweaks" />
     <MESSAGE value="Classes:&#10;-Avancado&#10;-Defesa&#10;-Lateral&#10;-Medio&#10;&#10;Small Tweaks:&#10;-GRedes&#10;-Jogador: enum para static final int" />
-    <option name="LAST_COMMIT_MESSAGE" value="Classes:&#10;-Avancado&#10;-Defesa&#10;-Lateral&#10;-Medio&#10;&#10;Small Tweaks:&#10;-GRedes&#10;-Jogador: enum para static final int" />
+    <MESSAGE value="Avaliacoes das diferentes posicoes (might need some changes)" />
+    <MESSAGE value="Class main para executar pequenos testes" />
+    <MESSAGE value="idk" />
+    <option name="LAST_COMMIT_MESSAGE" value="idk" />
   </component>
 </project>

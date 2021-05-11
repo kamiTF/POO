@@ -21,12 +21,12 @@ public class GRedes extends Jogador {
 
     //CONSTRUTORES
     public GRedes() {
-        super(Jogador.GREDES, 50, 50, 50, 50, 50, 50, 50);
+        super(Jogador.GREDES);
         this.elasticidade = 50;
     }
 
-    public GRedes(int vel, int res, int des, int imp, int jC, int rem, int cP, int elas) {
-        super(Jogador.GREDES, vel, res, des, imp, jC, rem, cP);
+    public GRedes(int num ,int vel, int res, int des, int imp, int jC, int rem, int cP, int elas) {
+        super(Jogador.GREDES, num,vel, res, des, imp, jC, rem, cP);
         this.elasticidade = elas;
     }
 

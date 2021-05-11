@@ -9,8 +9,8 @@ public class Avancado extends Jogador{
         super(Jogador.AVANCADO);
         this.aceleracao = 50;
     }
-    public Avancado(int vel , int res , int des , int imp , int jC, int rem , int cP, int acel){
-        super(Jogador.AVANCADO,vel,res,des,imp,jC,rem,cP);
+    public Avancado(int num,int vel , int res , int des , int imp , int jC, int rem , int cP, int acel){
+        super(Jogador.AVANCADO,num,vel,res,des,imp,jC,rem,cP);
         this.aceleracao = acel;
     }
     public Avancado (Avancado avancado){
