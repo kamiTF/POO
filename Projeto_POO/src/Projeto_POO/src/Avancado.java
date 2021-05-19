@@ -1,16 +1,15 @@
 package Projeto_POO.src;
 
+import java.util.concurrent.ThreadLocalRandom;
+
 public class Avancado extends Jogador{
     private int aceleracao;
 
 
 
-    public Avancado(){
-        super(Jogador.AVANCADO);
-        this.aceleracao = 50;
-    }
-    public Avancado(int num,int vel , int res , int des , int imp , int jC, int rem , int cP, int acel){
-        super(Jogador.AVANCADO,num,vel,res,des,imp,jC,rem,cP);
+
+    public Avancado(String nome,int num,int vel , int res , int des , int imp , int jC, int rem , int cP, int acel){
+        super(nome,num,vel,res,des,imp,jC,rem,cP);
         this.aceleracao = acel;
     }
     public Avancado (Avancado avancado){
@@ -52,11 +51,25 @@ public class Avancado extends Jogador{
                                     + ((100-this.getResistencia())      *0.7)
                                     + ((100-this.getDestreza())         *0.9)
                                     + ((100-this.getImpulsao())         *0.7)
-                                    + ((100-this.getJogoCabeca())       *0.9)
+                                    + ((100-this.getCabeca())       *0.9)
                                     + ((100-this.getRemate())           *0.5)
-                                    + ((100-this.getCapacidadePasse())  *0.5))/8);
+                                    + ((100-this.getPasse())  *0.5))/8);
 
 
         return overall;
     }
+    public static Avancado parse(String input){
+        String[] campos = input.split(",");
+        return new Avancado(campos[0], Integer.parseInt(campos[1]),
+                Integer.parseInt(campos[2]),
+                Integer.parseInt(campos[3]),
+                Integer.parseInt(campos[4]),
+                Integer.parseInt(campos[5]),
+                Integer.parseInt(campos[6]),
+                Integer.parseInt(campos[7]),
+                Integer.parseInt(campos[8]),
+                ThreadLocalRandom.current().nextInt(50, 100 + 1));
+
+    }
+
 }

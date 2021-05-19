@@ -3,30 +3,24 @@ package Projeto_POO.src;
 
 
 public class Medio extends Jogador {
-    private int recBolas;
+    private int recuperacao;
 
     //CONSTRUTOR VAZIO
-    public Medio(){
-        super(Jogador.MEDIO);
-        this.recBolas = 50;
-    }
-    //CONTRUTOR PARAMETERIZADO
-    public Medio(int num,int vel, int res , int des , int imp , int jC, int rem, int cP, int recBol){
-        super(Jogador.MEDIO,num,vel,res,des,imp,jC,rem,cP);
-        this.recBolas = recBol;
-
+    public Medio(String nomeJ, int numeroJ, int vel, int res, int des, int imp, int cab, int rem, int p, int rec) {
+        super(nomeJ, numeroJ, vel, res, des, imp, cab, rem, p);
+        recuperacao = rec;
     }
     //CONSTRUTOR DE COPIA
     public Medio(Medio medio){
         super(medio);
-        this.recBolas = medio.getRecBolas();
+        this.recuperacao = medio.getRecuperacao();
     }
     //GETTER E SETTER PARA RECUPERACAO DE BOLAS
-    public int getRecBolas(){
-        return  recBolas;
+    public int getRecuperacao(){
+        return recuperacao;
     }
-    public void setRecBolas(int rB){
-        this.recBolas = rB;
+    public void setRecuperacao(int rB){
+        this.recuperacao = rB;
     }
 
     //EQUALS
@@ -35,7 +29,7 @@ public class Medio extends Jogador {
         if (object == null || getClass() != object.getClass()) return false;
         if (!super.equals(object)) return false;
         Medio medio = (Medio) object;
-        return medio.equals(this) && medio.getRecBolas() == this.recBolas;
+        return medio.equals(this) && medio.getRecuperacao() == this.recuperacao;
     }
     //CLONE
 
@@ -47,23 +41,37 @@ public class Medio extends Jogador {
     //TOSTRING
     public String toString(){
         StringBuilder sb = new StringBuilder();
-        sb.append(super.toString()).append("Recuperacao de Bolas: ").append(this.getRecBolas());
+        sb.append(super.toString()).append("Recuperacao de Bolas: ").append(this.getRecuperacao());
         return sb.toString();
     }
 
     public int eval(){
         int overall = 100;
-        overall = (int) (overall    -(((100-this.getRecBolas())         *0.95)
+        overall = (int) (overall    -(((100-this.getRecuperacao())      *0.95)
                                     + ((100-this.getVelocidade())       *0.7)
                                     + ((100-this.getResistencia())      *0.7)
                                     + ((100-this.getDestreza())         *0.6)
                                     + ((100-this.getImpulsao())         *0.4)
-                                    + ((100-this.getJogoCabeca())       *0.3)
+                                    + ((100-this.getCabeca())           *0.3)
                                     + ((100-this.getRemate())           *0.5)
-                                    + ((100-this.getCapacidadePasse())  *0.9))/8);
+                                    + ((100-this.getPasse())            *0.9))/8);
 
 
         return overall;
+    }
+
+
+    public static Medio parse(String input){
+        String[] campos = input.split(",");
+        return new Medio(campos[0], Integer.parseInt(campos[1]),
+                Integer.parseInt(campos[2]),
+                Integer.parseInt(campos[3]),
+                Integer.parseInt(campos[4]),
+                Integer.parseInt(campos[5]),
+                Integer.parseInt(campos[6]),
+                Integer.parseInt(campos[7]),
+                Integer.parseInt(campos[8]),
+                Integer.parseInt(campos[9]));
     }
 
 

@@ -2,7 +2,7 @@ package Projeto_POO.src;
 
 
 
-public class GRedes extends Jogador {
+public class GuardaRedes extends Jogador {
     //Classe Guarda Redes criada a partir de uma super classe Jogador
 
     private int elasticidade;
@@ -20,17 +20,14 @@ public class GRedes extends Jogador {
 
 
     //CONSTRUTORES
-    public GRedes() {
-        super(Jogador.GREDES);
-        this.elasticidade = 50;
+
+
+    public GuardaRedes (String nomeJ, int numeroJ, int vel, int res, int des, int imp, int cab, int rem, int p, int elast) {
+        super(nomeJ, numeroJ, vel, res, des, imp, cab, rem, p);
+        elasticidade = elast;
     }
 
-    public GRedes(int num ,int vel, int res, int des, int imp, int jC, int rem, int cP, int elas) {
-        super(Jogador.GREDES, num,vel, res, des, imp, jC, rem, cP);
-        this.elasticidade = elas;
-    }
-
-    public GRedes(GRedes g) {
+    public GuardaRedes(GuardaRedes g) {
         super(g);
         this.elasticidade = g.getElasticidade();
     }
@@ -41,8 +38,8 @@ public class GRedes extends Jogador {
         return (super.toString() + "\nElasticidade: " + this.elasticidade);
     }
 
-    public GRedes clone() {
-        return new GRedes(this);
+    public GuardaRedes clone() {
+        return new GuardaRedes(this);
     }
 
 
@@ -50,7 +47,7 @@ public class GRedes extends Jogador {
         if (this == object) return true;
         if (object == null || getClass() != object.getClass()) return false;
         if (!super.equals(object)) return false;
-        GRedes gredes = (GRedes) object;
+        GuardaRedes gredes = (GuardaRedes) object;
         return gredes.equals(this) & gredes.getElasticidade() == this.elasticidade;
 
     }
@@ -61,11 +58,25 @@ public class GRedes extends Jogador {
                                     //Nao precisa de resitencia
                                     + ((100-this.getDestreza())         *0.6)
                                     + ((100-this.getImpulsao())         *0.9)
-                                    + ((100-this.getJogoCabeca())       *0.1)
+                                    + ((100-this.getCabeca())       *0.1)
                                     + ((100-this.getRemate())           *0.6)
-                                    + ((100-this.getCapacidadePasse())  *0.9))/6);
+                                    + ((100-this.getPasse())  *0.9))/6);
 
 
         return overall;
+    }
+
+
+    public static GuardaRedes parse(String input){
+        String[] campos = input.split(",");
+        return new GuardaRedes(campos[0], Integer.parseInt(campos[1]),
+                Integer.parseInt(campos[2]),
+                Integer.parseInt(campos[3]),
+                Integer.parseInt(campos[4]),
+                Integer.parseInt(campos[5]),
+                Integer.parseInt(campos[6]),
+                Integer.parseInt(campos[7]),
+                Integer.parseInt(campos[8]),
+                Integer.parseInt(campos[9]));
     }
 }

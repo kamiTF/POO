@@ -4,13 +4,9 @@ public class Defesa extends Jogador {
     private int desarme;
 
 
-    public Defesa(){
-        super(DEFESA);
-        this.desarme = 50;
-    }
-    public Defesa(int num,int vel , int res , int des , int imp , int jC, int rem , int cP, int desar){
-        super(Jogador.DEFESA,num,vel,res,des,imp,jC,rem,cP);
-        this.desarme = desar;
+
+    public Defesa(String nomeJ, int numeroJ, int vel, int res, int des, int imp, int cab, int rem, int p) {
+        super(nomeJ, numeroJ, vel, res, des, imp, cab, rem, p);
     }
     public Defesa(Defesa defesa){
         super(defesa);
@@ -48,12 +44,25 @@ public class Defesa extends Jogador {
                                     + ((100-this.getResistencia())      *0.5)
                                     + ((100-this.getDestreza())         *0.7)
                                     + ((100-this.getImpulsao())         *0.7)
-                                    + ((100-this.getJogoCabeca())       *0.8)
+                                    + ((100-this.getCabeca())       *0.8)
                                     + ((100-this.getRemate())           *0.5)
-                                    + ((100-this.getCapacidadePasse())  *0.9))/8);
+                                    + ((100-this.getPasse())  *0.9))/8);
 
 
         return overall;
+    }
+
+
+    public static Defesa parse(String input){
+        String[] campos = input.split(",");
+        return new Defesa(campos[0], Integer.parseInt(campos[1]),
+                Integer.parseInt(campos[2]),
+                Integer.parseInt(campos[3]),
+                Integer.parseInt(campos[4]),
+                Integer.parseInt(campos[5]),
+                Integer.parseInt(campos[6]),
+                Integer.parseInt(campos[7]),
+                Integer.parseInt(campos[8]));
     }
 
 

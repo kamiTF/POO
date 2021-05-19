@@ -5,13 +5,9 @@ public class Lateral extends Jogador{
 
 
 
-    public Lateral(){
-        super(Jogador.LATERAL);
-        this.cruzamento = 50;
-    }
-    public Lateral(int num ,int vel , int res , int des , int imp , int jC, int rem , int cP, int cruz){
-        super(Jogador.LATERAL,num,vel,res,des,imp,jC,rem,cP);
-        this.cruzamento = cruz;
+    public Lateral(String nomeJ, int numeroJ, int vel, int res, int des, int imp, int cab, int rem, int p, int cruz) {
+        super(nomeJ, numeroJ, vel, res, des, imp, cab, rem, p);
+        cruzamento = cruz;
     }
     public Lateral (Lateral lateral){
         super(lateral);
@@ -52,12 +48,26 @@ public class Lateral extends Jogador{
                                     + ((100-this.getResistencia())      *0.7)
                                     + ((100-this.getDestreza())         *0.6)
                                     + ((100-this.getImpulsao())         *0.4)
-                                    + ((100-this.getJogoCabeca())       *0.3)
+                                    + ((100-this.getCabeca())           *0.3)
                                     + ((100-this.getRemate())           *0.5)
-                                    + ((100-this.getCapacidadePasse())  *0.9))/8);
+                                    + ((100-this.getPasse())            *0.9))/8);
 
 
         return overall;
+    }
+
+
+    public static Lateral parse(String input){
+        String[] campos = input.split(",");
+        return new Lateral(campos[0], Integer.parseInt(campos[1]),
+                Integer.parseInt(campos[2]),
+                Integer.parseInt(campos[3]),
+                Integer.parseInt(campos[4]),
+                Integer.parseInt(campos[5]),
+                Integer.parseInt(campos[6]),
+                Integer.parseInt(campos[7]),
+                Integer.parseInt(campos[8]),
+                Integer.parseInt(campos[9]));
     }
 
 

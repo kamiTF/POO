@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1d43eb72-ec04-424e-ae31-ee3320bacdd2" name="Default Changelist" comment="idk">
-      <change afterPath="$PROJECT_DIR$/src/Projeto_POO/src/Jogo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Projeto POO/.idea/workspace.xml" beforeDir="false" />
+    <list default="true" id="1d43eb72-ec04-424e-ae31-ee3320bacdd2" name="Default Changelist" comment="adicionado numero aos jogadores&#10;Equipa agora sao dois maps:&#10;-1º para os titulares&#10;-2º para o banco&#10;Modificicacoes no getJogadores()">
+      <change afterPath="$PROJECT_DIR$/src/Projeto_POO/src/LinhaIncorretaException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Projeto_POO/src/Parser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Projeto_POO/src/Avancado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projeto_POO/src/Avancado.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Projeto_POO/src/Defesa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projeto_POO/src/Defesa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Projeto_POO/src/Equipa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projeto_POO/src/Equipa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Projeto_POO/src/GRedes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projeto_POO/src/GRedes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Projeto_POO/src/GRedes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projeto_POO/src/GuardaRedes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Projeto_POO/src/Jogador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projeto_POO/src/Jogador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Projeto_POO/src/Jogo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projeto_POO/src/Jogo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Projeto_POO/src/Lateral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projeto_POO/src/Lateral.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Projeto_POO/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projeto_POO/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Projeto_POO/src/Medio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projeto_POO/src/Medio.java" afterDir="false" />
@@ -26,6 +27,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
+        <option value="module-info" />
       </list>
     </option>
   </component>
@@ -64,6 +67,18 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Projeto_POO.src.Main" />
       <module name="Projeto_POO" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Projeto_POO.src.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Projeto_POO.src.Main" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Projeto_POO.src.*" />
@@ -139,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619778644557</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="adicionado numero aos jogadores&#10;Equipa agora sao dois maps:&#10;-1º para os titulares&#10;-2º para o banco&#10;Modificicacoes no getJogadores()">
+      <created>1620771951971</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1620771951971</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -160,6 +182,21 @@
     <MESSAGE value="Avaliacoes das diferentes posicoes (might need some changes)" />
     <MESSAGE value="Class main para executar pequenos testes" />
     <MESSAGE value="idk" />
-    <option name="LAST_COMMIT_MESSAGE" value="idk" />
+    <MESSAGE value="adicionado numero aos jogadores&#10;Equipa agora sao dois maps:&#10;-1º para os titulares&#10;-2º para o banco&#10;Modificicacoes no getJogadores()" />
+    <option name="LAST_COMMIT_MESSAGE" value="adicionado numero aos jogadores&#10;Equipa agora sao dois maps:&#10;-1º para os titulares&#10;-2º para o banco&#10;Modificicacoes no getJogadores()" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Projeto_POO/src/Equipa.java</url>
+          <line>48</line>
+          <properties class="Projeto_POO.src.Equipa" method="avanVSdef">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
