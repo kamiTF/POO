@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Main {
     public static void main(String[] args){
@@ -13,10 +14,10 @@ public class Main {
         Equipa fora = new Equipa("Arouca");
 
 
-        Avancado casaA = new Avancado("Cristiano Rinaldo",7,99,99,99,99,99,99,99,99);
+        Avancado casaA = new Avancado("Cristiano Rinaldo",7,90,90,90,90,90,85,90,90);
         Medio casaM = new Medio("Jose Socrates",20,70,70,70,70,70,70,70,70);
         Lateral casaL= new Lateral("Mesis",5,80,80,80,80,80,80,80,80);
-        Defesa casaD = new Defesa("PEPE",2,60,60,60,60,60,60,60);
+        Defesa casaD = new Defesa("PEPE",2,80,80,80,80,80,80,80);
         GuardaRedes casaGR = new GuardaRedes("Patricia",1,10,10,50,90,60,80,65,86);
 
         casa.insereJogador(casaA);
@@ -26,10 +27,10 @@ public class Main {
         casa.insereJogador(casaGR);
 
 
-        Avancado foraA = new Avancado("Cristiano Rinaldo",7,99,99,99,99,99,99,99,99);
+        Avancado foraA = new Avancado("Cristiano Rinaldo",7,90,90,90,90,90,85,90,90);
         Medio foraM = new Medio("Jose Socrates",20,70,70,70,70,70,70,70,70);
         Lateral foraL= new Lateral("Mesis",5,80,80,80,80,80,80,80,80);
-        Defesa foraD = new Defesa("PEPE",2,60,60,60,60,60,60,60);
+        Defesa foraD = new Defesa("PEPE",2,80,80,80,80,80,80,80);
         GuardaRedes foraGR = new GuardaRedes("Patricia",1,10,10,50,90,60,80,65,86);
 
         fora.insereJogador(foraA);
@@ -41,10 +42,17 @@ public class Main {
         Map<Integer,Integer> c = new HashMap<>();
         Map<Integer,Integer> f = new HashMap<>();
         Jogo jogo = new Jogo("Sporting","Arouca",0,0,LocalDate.now(),casa.getJogadores(),c,fora.getJogadores(),f);
-
-        System.out.println(jogo.iniciarJogo(casa,fora,jogo));
-
-        System.out.println(jogo.getGolosCasa());System.out.println(jogo.getGolosFora());
+        int coin = ThreadLocalRandom.current().nextInt(0, 2);
+        if(coin==0){
+            System.out.println("A bola começa do lado do: "+casa.getNome());
+            jogo.iniciarJogo(casa,fora,jogo,0);
+        }
+        else {
+            System.out.println("A bola começa do lado do: "+fora.getNome());
+            jogo.iniciarJogo(fora, casa, jogo, 0);
+        }
+        System.out.println("Golos Casa: "+jogo.getGolosCasa());
+        System.out.println("Golos Fora: "+jogo.getGolosFora());
 
 
 
